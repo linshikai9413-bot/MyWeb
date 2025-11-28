@@ -1,0 +1,181 @@
+/* -------------------------------------- */
+/* 1. 基礎重置與排版 (Base Reset & Typography) */
+/* -------------------------------------- */
+
+/* 全域重置：移除瀏覽器預設的內外邊距，設定盒模型為 border-box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 設定基礎字體、背景色和文字顏色 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9; /* 淺灰色背景，柔和舒適 */
+}
+
+/* 確保圖片和其他元素不會超出父容器 */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 連結樣式 */
+a {
+    color: #007bff; /* 藍色連結 */
+    text-decoration: none; /* 移除底線 */
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* -------------------------------------- */
+/* 2. 導航列 (Header & Navigation) */
+/* -------------------------------------- */
+
+#main-header {
+    background: #2c3e50; /* 深藍色背景 */
+    color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+#main-header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+#main-header nav ul {
+    list-style: none; /* 移除列表點 */
+    display: flex;
+    justify-content: center;
+}
+
+#main-header nav ul li {
+    margin: 0 15px;
+}
+
+#main-header nav a {
+    color: #ffffff;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+#main-header nav a:hover {
+    background: #34495e;
+    border-radius: 5px;
+}
+
+/* -------------------------------------- */
+/* 3. 主要內容區域 (Main Content Layout) */
+/* -------------------------------------- */
+
+/* 設置容器，限制內容最大寬度並居中 */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* 英雄區塊 (Hero Section) */
+.hero {
+    background: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cta-button {
+    display: inline-block;
+    background: #e74c3c; /* 醒目紅色 */
+    color: #ffffff;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background: #c0392b;
+}
+
+/* -------------------------------------- */
+/* 4. 工具卡片列表 (Tool Cards) */
+/* -------------------------------------- */
+
+.tools-container {
+    display: grid;
+    /* 響應式網格：在寬螢幕顯示三欄，窄螢幕顯示一欄 */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px; /* 卡片間距 */
+    margin-top: 30px;
+}
+
+.tool-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px); /* 懸停時略微上浮 */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.tool-card h4 {
+    color: #3498db; /* 標題顏色 */
+    margin-bottom: 10px;
+}
+
+.tags span {
+    display: inline-block;
+    background: #ecf0f1;
+    color: #7f8c8d;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.tool-link {
+    display: block;
+    margin-top: 15px;
+    text-align: right;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* -------------------------------------- */
+/* 5. 頁尾 (Footer) */
+/* -------------------------------------- */
+
+#main-footer {
+    background: #2c3e50;
+    color: #bdc3c7;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
